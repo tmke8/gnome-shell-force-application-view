@@ -1,0 +1,8 @@
+{
+  "uuid": "start-overlay-in-application-view@cis.net",
+  "name": "Start Overlay in Application View",
+  "description": "When pressing the Super key, the application view is shown instead of the view with the windows.",
+  "shell-version": [
+    "3.18"
+  ]
+}
