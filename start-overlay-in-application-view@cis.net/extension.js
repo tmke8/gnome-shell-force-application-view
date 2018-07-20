@@ -22,7 +22,7 @@ function init() {
 function enable() {
 
     // save the existing toggle function so we can use to to restore bits later
-    nativeToggleFunction = Overview.Overview.prototype['toggle'];
+    originalToggleFunction = Overview.Overview.prototype['toggle'];
 
     /*
     this is a copy of an existing toggle function but where we
@@ -78,8 +78,9 @@ function enable() {
 function disable() {
 
     /* 
-    if have the original function, put it back to back and re-bind the
-    'panel-main-menu' to original toggle again. (See explanation in enable function)
+    if we have the original function, put it back to back and re-bind the
+    'panel-main-menu' to original toggle again. (See explanation in enable
+    function)
     */
     if (originalToggleFunction !== null) {
         // save the ogi
